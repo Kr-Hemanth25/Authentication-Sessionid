@@ -8,7 +8,7 @@ function res(req,res,next) {
 
     const user=getid(userid)
     
-    if(!user) return res.redirect('/login')
+    if(!user){return res.redirect('/login')}
 
     req.user=user
     

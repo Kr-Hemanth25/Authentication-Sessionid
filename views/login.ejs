@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap:2vh;
+            align-items: center;
+            justify-items: center;
+        }
+        div{
+            display: flex;
+            flex-direction:column ;
+            justify-items: center;
+            align-items: center;
+            height: 40vh;
+            width: 40vw;
+            margin: auto;
+            margin-top: 20vh;
+            background-color: black;
+            color: white;
+            border-radius: 5vw;
+            padding-top:10vh ;
+            text-transform: capitalize;
+        }
+        button{
+            background-color: black;
+            border-radius: 5vw;
+            height: 5vh;
+            width: 5vw;
+            color: white;
+            border-color: white;
+            bottom: 2px solid white;
+        }
+        .dt{
+            background-color: black;
+            border-radius: 5vw;
+            height: 5vh;
+            width: 15vw;
+            color: white;
+            border-color: white;
+            bottom: 2px solid white;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Enter Below Details To Login</h1>
+    <form action="/login" method="post">
+    <!-- <input type="text" id="2" placeholder="Enter Username"></input> -->
+    <input type="text" id="3" placeholder="Enter Gmail" name="email" class="dt"></input>
+    <input type="text" id='4' placeholder="Enter Password" name="password" class="dt"></input>
+    <button value="0" id="1" type="submit">Login</button>
+    </form>
+    </div>
+    
+</body>
+</html>

@@ -1,4 +1,4 @@
-let model=require('../models/data.js')
+let model=require('../database/data.js')
 let {setid,getid}=require("../services/auth.js")
 const {v4:uuidv4}=require('uuid')
 
@@ -23,7 +23,7 @@ function handlesignup(req,res){
 
 async function handlelogin(req,res)
 {
-    console.log(uuidv4())
+
     let {email,password}=req.body
     let user=await model.findOne({email,password})
     if(user)
@@ -32,7 +32,7 @@ async function handlelogin(req,res)
             let sessionid=uuidv4()
             setid(sessionid,user)
             res.cookie('uid',sessionid)
-            console.log(getid(sessionid))
+            // console.log(getid(sessionid))
     return res.redirect('/')
         }
     else
